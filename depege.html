@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url(Milky_Way_Sky_Night_447884.jpg); /* Cambia 'fondo.jpg' por la URL de tu imagen de fondo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinea el contenido en la parte superior */
+            flex-direction: column; /* Cambia la dirección de la columna para alinear el botón a la derecha */
+        }
+
+        #moving-image {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 2s;
+        }
+
+        button {
+            background-color: #7e1a1a; /* Color azul oscuro */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            align-self: flex-start; /* Mueve el botón a la derecha */
+        }
+
+        button:hover {
+            background-color: #0d47a1; /* Cambia el color al hacer hover si lo deseas */
+        }
+    </style>
+</head>
+<body>
+    <img id="moving-image" src="Vector-Realistic-Rocket-PNG-Free-Download.png" alt="Imagen" width="200" height="200"> <!-- Cambia 'imagen.jpg' por la URL de tu imagen -->
+    <button onclick="moveImageUp()">Despegar</button>
+    
+    <script>
+        function moveImageUp() {
+            const movingImage = document.getElementById("moving-image");
+            movingImage.style.transform = "translate(-50%, -300%)"; /* Ajusta la transformación para subir más alto */
+        }
+    </script>
+</body>
+</html>
